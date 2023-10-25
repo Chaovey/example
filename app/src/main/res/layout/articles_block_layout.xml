@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 首页文章块布局 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="400dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--文章分类-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_gravity="center_vertical"
+                android:layout_width="3dp"
+                android:background="@color/colorPrimary"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/articles_category"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:text="推荐阅读"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!--五篇文章布局-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--三篇文章-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <!--第一篇文章-->
+                <importnew.importnewclient.customview.VerticalArticleView
+                    android:id="@+id/first_article"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp" />
+
+                <!--第2和3篇文章-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+
+                    <importnew.importnewclient.customview.VerticalArticleView
+                        android:id="@+id/second_article"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <importnew.importnewclient.customview.VerticalArticleView
+                        android:id="@+id/third_article"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--两篇文章-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <importnew.importnewclient.customview.VerticalArticleView
+                    android:id="@+id/fourth_article"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"></importnew.importnewclient.customview.VerticalArticleView>
+
+
+                <importnew.importnewclient.customview.VerticalArticleView
+                    android:id="@+id/fifth_article"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"></importnew.importnewclient.customview.VerticalArticleView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
